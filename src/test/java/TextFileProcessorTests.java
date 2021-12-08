@@ -12,6 +12,15 @@ public class TextFileProcessorTests {
     private TextFileProcessor processor  = new TextFileProcessor();
 
     @Test
+    @DisplayName("Process empty String")
+    public void processEmptyString() throws Exception {
+        String content = "";
+        FileStats file = processor.processContent(content);
+        System.out.println(file);
+
+    }
+
+    @Test
     @DisplayName("Process standard String")
     public void processStandardString() throws Exception {
         String content = "Hello world & good morning. The date is 18/05/2016";
